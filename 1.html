@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - Paris</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Styles Perso -->
+    <style>
+        .card { box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 15px; border-radius: 10px; margin-bottom: 20px; }
+
+        iframe {
+            width: 100%;
+            height: 300px; /* tous les écrans */
+        }
+
+        @media (min-width: 768px) {
+            iframe {
+                height: 450px; /* grands écrans */
+            }
+        }
+
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mon Tableau de Bord</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#calendar"><i class="fas fa-calendar-alt"></i> Mon Calendrier</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#drive"><i class="fab fa-google-drive"></i> Mes Docs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sheets"><i class="fas fa-file-excel"></i> Mes Tableurs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#maps"><i class="fas fa-map-marker-alt"></i> Mes Plans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#divertissement"><i class="fas fa-film"></i> Divertissement</a></li>
+                </ul>
+                <!-- Dropdown for Google Apps -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="googleAppsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-th"></i> Applications Google
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="googleAppsDropdown">
+                            <li><a class="dropdown-item" href="https://mail.google.com" target="_blank"><i class="fas fa-envelope"></i> Gmail</a></li>
+                            <li><a class="dropdown-item" href="https://drive.google.com" target="_blank"><i class="fab fa-google-drive"></i> Google Drive</a></li>
+                            <li><a class="dropdown-item" href="https://calendar.google.com" target="_blank"><i class="fas fa-calendar-alt"></i> Google Calendar</a></li>
+                            <li><a class="dropdown-item" href="https://maps.google.com" target="_blank"><i class="fas fa-map-marker-alt"></i> Google Maps</a></li>
+                            <li><a class="dropdown-item" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu Principal -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Section Calendrier (plus grande) -->
+            <div class="col-12 col-md-8">
+                <div class="card">
+                    <h2 class="h5"><i class="fas fa-calendar-alt"></i> Mon Calendrier</h2>
+                    <iframe src="https://calendar.google.com/calendar/embed?src=patrick.assis192%40gmail.com&amp;ctz=Europe%2FParis" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <!-- Section Tableurs -->
+            <div class="col-12 col-md-6">
+                <div class="card">
+                    <h2 class="h5"><i class="fas fa-file-excel"></i> Mes Tableurs</h2>
+                    <iframe src="https://docs.google.com/spreadsheets/d/1K6XxRWKJvd8rvYucoquMx3P41vf-kVzYJea9ndj7jmo/edit?gid=1254859797" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <!-- Section Docs -->
+            <div class="col-12 col-md-6">
+                <div class="card">
+                    <h2 class="h5"><i class="fab fa-google-drive"></i> Mes Docs</h2>
+                    <iframe src="https://drive.google.com/embeddedfolderview?id=1UnVRuKKN2nX7K9b6iFgs6w0KB7On05PP&amp;usp=sharing" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <!-- Section Plans (moins importante, plus petite) -->
+            <div class="col-12 col-md-4">
+                <div class="card">
+                    <h2 class="h5"><i class="fas fa-map-marker-alt"></i> Mes Plans</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.514519429651!2d-79.38318608452569!3d43.65322677912157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d1b31e9d4f%3A0x3e5efb72b6a62c0!2sCN%20Tower!5e0!3m2!1sen!2sca!4v1635102179073!5m2!1sen!2sca" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <!-- Section Divertissement (encore plus petite) -->
+            <div class="col-12 col-md-3 d-md-none" id="divertissement">
+                <div class="card">
+                    <h2 class="h5"><i class="fas fa-film"></i> Divertissement</h2>
+
+                    <!-- YouTube Player -->
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <!-- Spotify Player -->
+                    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

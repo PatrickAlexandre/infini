@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modern Dashboard</title>
+    
+    <!-- Tailwind CSS for responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        iframe { width: 100%; height: 500px; margin-bottom: 20px; }
+        .title-font { font-family: 'Rajdhani', sans-serif; font-size: 1.5rem; font-weight: 700; }
+        .card { background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Sidebar -->
+    <nav class="bg-gray-800 text-white p-6 w-64 h-screen fixed">
+        <h1 class="title-font mb-6">Dashboard</h1>
+        <ul>
+            <li><a href="#calendar" class="block mb-4">Google Calendar</a></li>
+            <li><a href="#drive" class="block mb-4">Google Drive</a></li>
+            <li><a href="#sheets" class="block mb-4">Google Sheets</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="ml-64 p-6">
+        <div class="grid">
+            <!-- Calendar -->
+            <section id="calendar" class="card">
+                <h2 class="title-font">Google Calendar</h2>
+                <iframe src="https://calendar.google.com/calendar/embed?src=patrick.assis192%40gmail.com&amp;ctz=Europe%2FParis"></iframe>
+            </section>
+
+            <!-- Google Drive -->
+            <section id="drive" class="card">
+                <h2 class="title-font">Google Drive</h2>
+                <iframe src="https://drive.google.com/embeddedfolderview?id=1vkuMRfQ7mwTitWGAAQgbo9X0NJTbe9v0&amp;usp=sharing"></iframe>
+            </section>
+
+            <!-- Google Sheets -->
+            <section id="sheets" class="card">
+                <h2 class="title-font">Google Sheets</h2>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ48lMNOPs1Y89k9d5xnCN1MIMv_29VgFN95eJ1Kr6p6ar5NJsm-rBYyIWk5nArT-oeOYj73do4yOmd/pubhtml?gid=1254859797&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>
